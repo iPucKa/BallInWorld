@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Platform : MonoBehaviour
@@ -10,10 +8,17 @@ public class Platform : MonoBehaviour
 	private float _xInput;
 	private float _yInput;
 
-	private float _deadInputZone = 0.05f;
+	private float _deadInputZone = 0.01f;
 
-	[SerializeField] private float _tiltSideForce;
+	private bool _canRotate;
 
+	[SerializeField] private float _rotateUpDownForce;
+	[SerializeField] private float _rotateRightLeftForce;
+
+	private void Awake()
+	{
+		_canRotate = true;
+	}
 	private void Update()
 	{
 		_xInput = Input.GetAxisRaw(_horizontalAxis);
@@ -22,24 +27,24 @@ public class Platform : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if(Mathf.Abs(_xInput) > _deadInputZone)
+		if (_canRotate)
 		{
-			RotateToX(_xInput);
-		}
+			if (Mathf.Abs(_xInput) > _deadInputZone)
+				TiltRightLeft(_xInput);
 
-		if (Mathf.Abs(_yInput) > _deadInputZone)
-		{
-			RotateToZ(_yInput);
+			if (Mathf.Abs(_yInput) > _deadInputZone)
+				TiltUpDown(_yInput);
 		}
 	}
 
-	private void RotateToX(float xInput)
-	{
-		transform.Rotate(Vector3.back * _xInput * _tiltSideForce * Time.deltaTime);
-	}
+	private void TiltRightLeft(float xInput) => 
+		transform.Rotate(Vector3.back * _xInput * _rotateRightLeftForce * Time.deltaTime, Space.World);
+	
+	private void TiltUpDown(float yInput) => 
+		transform.Rotate(Vector3.right * _yInput * _rotateUpDownForce * Time.deltaTime, Space.World);	
 
-	private void RotateToZ(float yInput)
+	public void Stop()
 	{
-		transform.Rotate(Vector3.right * _yInput * _tiltSideForce * Time.deltaTime);
+		_canRotate = false;
 	}
 }

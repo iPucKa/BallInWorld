@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 	[SerializeField] private List<Coin> _coinsInScene;
 
 	[SerializeField] private float _maxTimeToLose;
-	
+
 	private int _coinsCountToWin;
 
 	private float _currentTime;
