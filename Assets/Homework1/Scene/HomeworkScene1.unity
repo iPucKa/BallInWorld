@@ -988,7 +988,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a53afa7a3bda6c642af2a50f267eef86, type: 2}
+  - {fileID: 2100000, guid: a3313a554fd76864caee65db9c9e1076, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1422,8 +1422,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0000014, y: 4, z: 0.5300008}
-  m_Center: {x: 0.00000029802328, y: 2, z: 0.014999721}
+  m_Size: {x: 4.0000014, y: 7.2025127, z: 0.5300008}
+  m_Center: {x: 0.00000023841856, y: 3.6012564, z: 0.0149997175}
 --- !u!1001 &570335512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1499,11 +1499,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 570335517}
+      addedObject: {fileID: 570335516}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 570335516}
+      addedObject: {fileID: 570335517}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
@@ -1695,8 +1695,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.0000014, y: 4, z: 0.5300008}
-  m_Center: {x: 0.00000029802328, y: 2, z: 0.014999721}
+  m_Size: {x: 4.0000014, y: 7.023409, z: 0.5300008}
+  m_Center: {x: 0.00000023841856, y: 3.5117044, z: 0.0149997175}
 --- !u!1001 &666072477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1915,11 +1915,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 741846835}
+      addedObject: {fileID: 741846834}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 741846834}
+      addedObject: {fileID: 741846835}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
@@ -2043,7 +2043,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cbb163c79b314e94c8917a5c95da2688, type: 2}
+  - {fileID: 2100000, guid: e22e7bc9e1c255547a3f89fa65a45cd2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2940,6 +2940,10 @@ GameObject:
   - component: {fileID: 1215114271}
   - component: {fileID: 1215114270}
   - component: {fileID: 1215114269}
+  - component: {fileID: 1215114272}
+  - component: {fileID: 1215114273}
+  - component: {fileID: 1215114274}
+  - component: {fileID: 1215114275}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -2977,9 +2981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103d64f6bf94636489aece28ba17a647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpEffect: {fileID: 1620231914}
-  _jumpForce: 10
-  _moveForce: 20
 --- !u!135 &1215114270
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3028,6 +3029,57 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &1215114272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215114267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714319f428aa18e42bce19feefa75331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1215114273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215114267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1139d6a8d6c10499935b316b2e408f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1215114274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215114267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99366176adbb8ec488c12726cf6119f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpEffect: {fileID: 1620231914}
+  _jumpForce: 10
+--- !u!114 &1215114275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215114267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c38c50cd1982c4387f303c9cd1c6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveForce: 20
 --- !u!1001 &1223251870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3891,6 +3943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ball: {fileID: 1215114269}
+  _coinCollector: {fileID: 1215114272}
   _coinsInScene:
   - {fileID: 1703823239}
   - {fileID: 1683590513}
@@ -4358,8 +4411,8 @@ ParticleSystemRenderer:
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_UseCustomVertexStreams: 0
-  m_VertexStreams: 00010304
+  m_UseCustomVertexStreams: 1
+  m_VertexStreams: 00030409
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
@@ -9600,11 +9653,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1703823236}
+      addedObject: {fileID: 1703823235}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1703823235}
+      addedObject: {fileID: 1703823236}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 260a36e3846ab9a4bb8ee6fb1a334e50,
         type: 3}
       insertIndex: -1
@@ -10296,6 +10349,6 @@ SceneRoots:
   - {fileID: 765357487}
   - {fileID: 1215114268}
   - {fileID: 1620231912}
-  - {fileID: 1465715380}
   - {fileID: 26871479}
   - {fileID: 1327922965}
+  - {fileID: 1465715380}

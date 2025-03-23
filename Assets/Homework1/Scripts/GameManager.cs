@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	[SerializeField] private Ball _ball;
+	[SerializeField] private CoinCollector _coinCollector;
 	[SerializeField] private List<Coin> _coinsInScene;
 
 	[SerializeField] private float _maxTimeToLose;
@@ -57,9 +58,6 @@ public class GameManager : MonoBehaviour
 
 	private int CalculateCoins()
 	{
-		if (_coinsInScene == null)
-			return 0;
-
 		int collectedCoins = 0;
 
 		foreach (Coin coin in _coinsInScene)
