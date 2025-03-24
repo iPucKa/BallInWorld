@@ -17,7 +17,7 @@ public class CoinCollector : MonoBehaviour
 		{
 			coin.Collect();
 
-			_ball.GetCoin(coin.CoinValue);
+			_ball.TakeCoin(coin.CoinValue);
 		}
 	}
 }
